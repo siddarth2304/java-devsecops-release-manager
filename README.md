@@ -1,18 +1,22 @@
-
 ## Quick Start with Docker
 
 This project is fully containerized using Docker and Docker Compose.  
 No manual PostgreSQL setup is required.
 
-### Run the project
+### Prerequisites
 
+- Docker
+- Docker Compose
 
+### Run the Project
+
+```bash
 git clone https://github.com/siddarth2304/java-devsecops-release-manager.git
 cd java-devsecops-release-manager
 docker compose up --build
 
 
-
+```
 # Java DevSecOps Release Manager
 
 ## Problem Statement
