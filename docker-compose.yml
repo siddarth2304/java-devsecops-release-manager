@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: devsecops-postgres
+    environment:
+      POSTGRES_DB: devsecops_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: java-devsecops-release-manager
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/devsecops_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_DATABASE_PLATFORM: org.hibernate.dialect.PostgreSQLDialect
+      SERVER_PORT: 8080
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres-data:
