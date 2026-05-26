@@ -3,8 +3,6 @@
 ## Problem Statement
 Enterprise software teams often struggle with poor visibility across build, deployment, approval, rollback, and code quality workflows. This project solves that problem by providing a Java Spring Boot based backend system that tracks software projects, builds, deployments, code quality reports, approvals, and audit logs in one structured release automation platform.
 
-## Why this project is relevant to AutoRABIT
-This project is aligned with AutoRABIT-style DevSecOps concepts such as CI/CD automation, release governance, code quality checks, deployment visibility, approval workflow, rollback support, and audit-ready software delivery.
 
 ## Features
 - Project management
